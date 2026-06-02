@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão Clique em Mim</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f9f7f7;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #92f1a7;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #33c553;
+    }
+
+    .mododarkbody {
+        background: black;
+        color: white;
+    }
+
+    .mododarkbutton {
+        background-color: rgb(209, 111, 245);
+        font-weight: bold;
+    }
+
+    .mododarkbutton:hover {
+        transform: scale(1.05);
+        background-color: #7e0977;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao nosso site!</h1>
+      <button onclick="handleClick()">Alterar para modo escuro</button>
+    </div>
+
+  <script>
+    function handleClick() {
+
+        const telaInicial = document.querySelector('body');
+        telaInicial.classList.add('mododarkbody');
+
+        /* const itens = ['pedra', 'papel', 'tesoura'];
+        const escolha = itens[Math.floor(Math.random() * itens.length)]; */
+
+        const titulo = document.querySelector('h1');
+        titulo.classList.add('mododarkbody');
+
+        const botao = document.querySelector('button');
+        botao.classList.add('mododarkbutton'); // Adiciona a classe de destaque ao button 
+        botao.textContent = 'Alterar para modo claro';
+
+        botao.onclick = function() {
+
+            if (telaInicial.classList.contains('mododarkbody')) {
+                telaInicial.classList.remove('mododarkbody');
+                titulo.classList.remove('mododarkbody');
+                botao.classList.remove('mododarkbutton');
+                botao.textContent = 'Alterar para modo escuro';
+
+            } else {
+                telaInicial.classList.add('mododarkbody');
+                titulo.classList.add('mododarkbody');
+                botao.classList.add('mododarkbutton');
+                botao.textContent = 'Alterar para modo claro';
+            }
+
+        }
+
+    }
+  </script>
+
+</body>
+</html>
