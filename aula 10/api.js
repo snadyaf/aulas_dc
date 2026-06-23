@@ -1,4 +1,4 @@
-const cepUsuario = document.getElementById("cep");
+/* const cepUsuario = document.getElementById("cep");
 const dadosEndereco = document.getElementById("resultado");
 
 const consulta = document.getElementById("btnConsultar");
@@ -55,4 +55,5 @@ limpar.addEventListener("click", function(){
 
     dadosEndereco.innerHTML = "";
 
-});
+}); */
+
